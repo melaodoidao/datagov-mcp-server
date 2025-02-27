@@ -4,39 +4,28 @@ An MCP server for accessing data from Data.gov, providing tools and resources fo
 
 ## Installation
 
-1.  **Clone the repository:**
+1.  **Install the package globally:**
 
     ```bash
-    git clone https://github.com/melaodoidao/datagov-mcp-server.git
-    cd datagov-mcp-server
+    npm install -g @melaodoidao/datagov-mcp-server
     ```
 
-2.  **Install dependencies:**
+2. **Configure the MCP Server:**
 
-    ```bash
-    npm install
-    ```
-
-3.  **Build the server:**
-
-    ```bash
-    npm run build
-    ```
-
-4. **Configure the MCP Server:**
    - Add the following entry to your `cline_mcp_settings.json` file (usually located in `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/` on macOS):
+
      ```json
       {
         "mcpServers": {
           "datagov": {
-            "command": "node",
-            "args": ["/Users/joaobondan/Documents/Cline/MCP/datagov-mcp-server/build/index.js"],
+            "command": "datagov-mcp-server",
+            "args": [],
             "env": {}
           }
         }
       }
-      ```
-   -  If you are using the Claude Desktop app, add the entry to `~/Library/Application Support/Claude/claude_desktop_config.json` instead.
+     ```
+    - If you are using the Claude Desktop app, add the entry to `~/Library/Application Support/Claude/claude_desktop_config.json` instead.
 
 ## Usage
 
