@@ -1,0 +1,41 @@
+{
+  "name": "@melaodoidao/datagov-mcp-server",
+  "version": "0.1.0",
+  "description": "An MCP server for accessing data from Data.gov, providing tools and resources for interacting with government datasets.",
+  "private": false,
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "datagov-mcp-server": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.6.7"
+  },
+  "keywords": [
+    "mcp",
+    "data.gov",
+    "government",
+    "datasets",
+    "api"
+  ],
+  "author": "Joao Bondan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melaodoidao/datagov-mcp-server.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}
