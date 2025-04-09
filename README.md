@@ -2,6 +2,10 @@
 
 An MCP server for accessing data from Data.gov, providing tools and resources for interacting with government datasets.
 
+<a href="https://glama.ai/mcp/servers/qi5i2d6sen">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/qi5i2d6sen/badge" alt="Data.gov Server MCP server" />
+</a>
+
 ## Installation
 
 1.  **Install the package globally:**
